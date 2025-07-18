@@ -41,13 +41,18 @@ export const Certificates = () => {
           variants={slideInFromLeft(0.5)}
           className="text-center mb-16"
         >
-          <h1 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 mb-4">
-            Certificates & Achievements
+          <h1 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 mb-6">
+            Certifications & Achievements
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            My professional journey and contributions in space technology, validated through credentials from NASA and ISRO.
-            Click on any certificate to view it in full detail.
-          </p>
+          <div className="space-y-4 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 leading-relaxed">
+              My professional journey through space technology is reflected in these credentials from NASA and ISRO.
+              Each certificate represents a milestone in my commitment to advancing space science and research.
+            </p>
+            <p className="text-base text-gray-400 italic">
+              Click on any certificate image to view it in full screen with zoom capabilities.
+            </p>
+          </div>
         </motion.div>
 
         {/* NASA Certificates Section */}
@@ -70,7 +75,7 @@ export const Certificates = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex flex-col space-y-10">
             {CERTIFICATES.filter((cert) => cert.organization.includes('NASA')).map((certificate) => (
               <CertificateCard 
                 key={certificate.id}
@@ -100,7 +105,7 @@ export const Certificates = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex flex-col space-y-10">
             {CERTIFICATES.filter((cert) => cert.organization.includes('ISRO')).map((certificate) => (
               <CertificateCard 
                 key={certificate.id}

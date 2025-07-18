@@ -16,7 +16,6 @@ export default function Home() {
         <Certificates />
         <Achievements />
         <Projects />
-        <Footer />
       </div>
     </main>
   );

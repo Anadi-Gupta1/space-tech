@@ -500,7 +500,7 @@ export const CERTIFICATES = [
     organization: "NASA GLOBE Program",
     date: "July 2025",
     image: "/images/certificates/nasa-globe.jpg",
-    description: "Recognition as an active volunteer contributor to NASA's GLOBE Program, collecting environmental data to support global research efforts in Earth science."
+    description: "As an active contributor to NASA's GLOBE Program, I collect and submit observations of clouds, trees, land cover, and mosquito habitats to help scientists interpret satellite data and monitor environmental changes. Part of a global community with over 38,000 participants contributing 320,000 observations worldwide."
   },
   {
     id: "nasa-vdp",
@@ -508,7 +508,7 @@ export const CERTIFICATES = [
     organization: "NASA Cybersecurity",
     date: "May 2025",
     image: "/images/certificates/nasa-vdp.jpg",
-    description: "Contributed as an independent researcher, successfully identifying and submitting 19 security vulnerabilities within NASA's digital assets."
+    description: "Contributed as an independent researcher under NASA's Vulnerability Disclosure Program, demonstrating strong analytical and ethical hacking skills. Successfully identified and submitted 19 security vulnerabilities, with 5 officially accepted, helping improve the cybersecurity posture of key NASA platforms."
   },
   {
     id: "nasa-open-science",
@@ -516,7 +516,7 @@ export const CERTIFICATES = [
     organization: "NASA Science Mission Directorate",
     date: "2025",
     image: "/images/certificates/nasa-open-science.jpg",
-    description: "Official recognition from NASA's Science Mission Directorate for completing training and commitment to fostering open, collaborative, and reproducible science."
+    description: "Official recognition from NASA's Science Mission Directorate, signed by Dr. Nicola Fox, for completing NASA's Open Science 101 course. This certification demonstrates my hands-on experience with open science principles including open data management, reproducible code development, and collaborative research methodologies that advance NASA's vision for inclusive and participatory science."
   },
   {
     id: "nasa-dart",
@@ -524,7 +524,7 @@ export const CERTIFICATES = [
     organization: "NASA Planetary Defense",
     date: "May 28, 2025",
     image: "/images/certificates/nasa-dart.jpg",
-    description: "Awarded for participation in NASA's Double Asteroid Redirection Test, demonstrating the capability of altering an asteroid's orbit for planetary defense."
+    description: "Recognized as a Planetary Defender for my participation in NASA's Double Asteroid Redirection Test (DART) mission. This groundbreaking mission successfully demonstrated, for the first time, the capability of altering an asteroid's orbit through direct impact, providing proof of concept for future planetary defense measures against potential Earth impact threats."
   },
   {
     id: "isro-ai-ml",
@@ -532,7 +532,7 @@ export const CERTIFICATES = [
     organization: "ISRO - Indian Institute of Remote Sensing",
     date: "August 19-23, 2024",
     image: "/images/certificates/isro-aiml.jpg",
-    description: "Completion of an intensive program covering AI/ML applications in geospatial data science, including deep learning models and machine learning pipelines."
+    description: "Completed this intensive five-day program from ISRO's Indian Institute of Remote Sensing covering advanced AI/ML applications in geospatial data science. Gained hands-on experience with supervised and unsupervised learning techniques, deep learning models (CNNs, RNNs), and implementing machine learning pipelines using Python and Google Earth Engine for environmental monitoring and disaster management."
   },
   {
     id: "isro-space-tech",
@@ -540,6 +540,6 @@ export const CERTIFICATES = [
     organization: "ISRO - Indian Institute of Remote Sensing",
     date: "January 10, 2025",
     image: "/images/certificates/isro-space-tech.jpg",
-    description: "Participation in specialized workshop covering advances in satellite remote sensing, GNSS integration, and innovations in space-based technologies."
+    description: "Participated in this specialized workshop under ISRO's IIRS Outreach Programme exploring how space-based technologies are revolutionizing various sectors. The workshop covered advances in satellite remote sensing, GNSS integration in precision agriculture, space-based communication networks for societal benefit, and innovations in small satellites for improving accessibility to space-derived data."
   }
 ] as const;
