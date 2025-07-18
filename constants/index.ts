@@ -349,12 +349,12 @@ export const FOOTER_DATA = [
       {
         name: "NASA GLOBE Profile",
         icon: null,
-        link: "#space-tech",
+        link: "#achievements",
       },
       {
-        name: "Space Achievements",
+        name: "Certificates",
         icon: null,
-        link: "#space-tech",
+        link: "#certificates",
       },
     ],
   },
@@ -368,6 +368,14 @@ export const NAV_LINKS = [
   {
     title: "Space Tech",
     link: "#space-tech",
+  },
+  {
+    title: "Certificates",
+    link: "#certificates",
+  },
+  {
+    title: "Achievements",
+    link: "#achievements",
   },
 ] as const;
 
@@ -482,5 +490,56 @@ export const ACHIEVEMENTS = [
       "Small satellite innovations for accessible space data"
     ],
     stats: "Part of ISRO's outreach initiative for space technology education"
+  }
+] as const;
+
+export const CERTIFICATES = [
+  {
+    id: "nasa-globe",
+    title: "NASA GLOBE Program Citizen Scientist",
+    organization: "NASA GLOBE Program",
+    date: "July 2025",
+    image: "/images/certificates/nasa-globe.jpg",
+    description: "Recognition as an active volunteer contributor to NASA's GLOBE Program, collecting environmental data to support global research efforts in Earth science."
+  },
+  {
+    id: "nasa-vdp",
+    title: "NASA Vulnerability Disclosure Program",
+    organization: "NASA Cybersecurity",
+    date: "May 2025",
+    image: "/images/certificates/nasa-vdp.jpg",
+    description: "Contributed as an independent researcher, successfully identifying and submitting 19 security vulnerabilities within NASA's digital assets."
+  },
+  {
+    id: "nasa-open-science",
+    title: "NASA Open Science 101",
+    organization: "NASA Science Mission Directorate",
+    date: "2025",
+    image: "/images/certificates/nasa-open-science.jpg",
+    description: "Official recognition from NASA's Science Mission Directorate for completing training and commitment to fostering open, collaborative, and reproducible science."
+  },
+  {
+    id: "nasa-dart",
+    title: "NASA DART Planetary Defender Certificate",
+    organization: "NASA Planetary Defense",
+    date: "May 28, 2025",
+    image: "/images/certificates/nasa-dart.jpg",
+    description: "Awarded for participation in NASA's Double Asteroid Redirection Test, demonstrating the capability of altering an asteroid's orbit for planetary defense."
+  },
+  {
+    id: "isro-ai-ml",
+    title: "AI/ML for Geodata Analysis",
+    organization: "ISRO - Indian Institute of Remote Sensing",
+    date: "August 19-23, 2024",
+    image: "/images/certificates/isro-aiml.jpg",
+    description: "Completion of an intensive program covering AI/ML applications in geospatial data science, including deep learning models and machine learning pipelines."
+  },
+  {
+    id: "isro-space-tech",
+    title: "Applications of Space Technology Workshop",
+    organization: "ISRO - Indian Institute of Remote Sensing",
+    date: "January 10, 2025",
+    image: "/images/certificates/isro-space-tech.jpg",
+    description: "Participation in specialized workshop covering advances in satellite remote sensing, GNSS integration, and innovations in space-based technologies."
   }
 ] as const;
