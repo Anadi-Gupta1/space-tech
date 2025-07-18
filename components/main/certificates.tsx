@@ -55,66 +55,16 @@ export const Certificates = () => {
           </div>
         </motion.div>
 
-        {/* NASA Certificates Section */}
-        <motion.div
-          variants={slideInFromLeft(0.7)}
-          className="mb-20"
-        >
-          <div className="flex items-center justify-center mb-12">
-            <div className="flex items-center gap-4">
-              <Image 
-                src="/images/Nasa LOGO.jpg" 
-                alt="NASA Logo"
-                width={48}
-                height={48}
-                className="object-contain rounded-full bg-white/10 p-1" 
-              />
-              <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
-                NASA Certifications
-              </h2>
-            </div>
-          </div>
-
-          <div className="flex flex-col space-y-10">
-            {CERTIFICATES.filter((cert) => cert.organization.includes('NASA')).map((certificate) => (
-              <CertificateCard 
-                key={certificate.id}
-                certificate={certificate}
-                onImageClick={openModal}
-              />
-            ))}
-          </div>
-        </motion.div>
-
-        {/* ISRO Certificates Section */}
-        <motion.div
-          variants={slideInFromRight(0.7)}
-        >
-          <div className="flex items-center justify-center mb-12">
-            <div className="flex items-center gap-4">
-              <Image 
-                src="/images/ISRO logo.jpg" 
-                alt="ISRO Logo"
-                width={48}
-                height={48} 
-                className="object-contain rounded-full bg-white/10 p-1" 
-              />
-              <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
-                ISRO Certifications
-              </h2>
-            </div>
-          </div>
-
-          <div className="flex flex-col space-y-10">
-            {CERTIFICATES.filter((cert) => cert.organization.includes('ISRO')).map((certificate) => (
-              <CertificateCard 
-                key={certificate.id}
-                certificate={certificate}
-                onImageClick={openModal}
-              />
-            ))}
-          </div>
-        </motion.div>
+        {/* Certificates List - Horizontal Row Layout */}
+        <div className="flex flex-col gap-12">
+          {CERTIFICATES.map((certificate) => (
+            <CertificateCard
+              key={certificate.id}
+              certificate={certificate}
+              onImageClick={openModal}
+            />
+          ))}
+        </div>
       </motion.div>
 
       {/* Certificate Modal */}

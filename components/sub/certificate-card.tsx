@@ -19,41 +19,41 @@ interface CertificateCardProps {
   onImageClick: (image: string, title: string) => void;
 }
 
+
 export const CertificateCard = ({ certificate, onImageClick }: CertificateCardProps) => {
   return (
     <motion.div
       variants={slideInFromLeft(0.5)}
-      className="flex flex-col md:flex-row h-full bg-gradient-to-br from-purple-900/20 to-blue-900/20 backdrop-blur-sm border border-purple-500/20 rounded-2xl overflow-hidden hover:border-purple-400/40 transition-all duration-300 shadow-lg shadow-purple-900/20"
+      className="flex flex-col md:flex-row w-full bg-gradient-to-br from-[#0a0026]/80 to-[#1a0a3c]/80 border border-purple-500/30 rounded-2xl overflow-hidden shadow-lg shadow-purple-900/20 mb-10"
     >
-      {/* Left side - Certificate Image */}
-      <div 
-        className="relative overflow-hidden cursor-pointer w-full md:w-1/2"
+      {/* Left: Certificate Image */}
+      <div
+        className="relative w-full md:w-1/3 min-h-[220px] max-h-[400px] flex items-center justify-center bg-black/40 cursor-pointer"
         onClick={() => onImageClick(certificate.image, certificate.title)}
       >
-        <div className="aspect-[4/3] md:aspect-square relative">
-          <Image
-            src={certificate.image}
-            alt={`${certificate.title} Certificate`}
-            fill
-            className="object-contain md:object-cover hover:scale-105 transition-transform duration-300"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            priority
-          />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
-          <div className="p-4 text-white">
-            <p className="text-sm font-medium">Click to view full certificate</p>
-          </div>
+        <Image
+          src={certificate.image}
+          alt={`${certificate.title} Certificate`}
+          fill
+          className="object-contain rounded-lg hover:scale-105 transition-transform duration-300"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 400px"
+          priority
+        />
+        <div className="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-3 py-1 rounded-full shadow-md opacity-80 pointer-events-none">
+          Click to enlarge
         </div>
       </div>
 
-      {/* Right side - Certificate Details */}
-      <div className="p-6 md:p-8 flex flex-col flex-grow md:w-1/2 justify-center">
-        <h3 className="text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 mb-3">
+      {/* Right: Certificate Details */}
+      <div className="w-full md:w-2/3 p-6 flex flex-col justify-center gap-2">
+        <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 mb-2">
           {certificate.title}
         </h3>
-        <p className="text-sm md:text-base text-gray-400 mb-4">{certificate.organization} | {certificate.date}</p>
-        <p className="text-gray-300 text-sm md:text-base flex-grow leading-relaxed">
+        <p className="text-base text-gray-400 mb-1 font-semibold">
+          {certificate.organization}
+          {certificate.date && <span className="ml-2 text-xs text-cyan-300">{certificate.date}</span>}
+        </p>
+        <p className="text-gray-300 text-base leading-relaxed">
           {certificate.description}
         </p>
       </div>
