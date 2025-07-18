@@ -7,3 +7,20 @@
 
 [build.environment]
   NEXT_PUBLIC_SITE_URL = "https://anadi-space-portfolio.netlify.app"
+  
+# For Next.js app directory projects
+[functions]
+  included_files = [".next/server/**"]
+  
+[build.processing]
+  skip_processing = false
+[build.processing.html]
+  pretty_urls = true
+[build.processing.css]
+  bundle = false
+  minify = false
+[build.processing.js]
+  bundle = false
+  minify = false
+[build.processing.images]
+  compress = false
